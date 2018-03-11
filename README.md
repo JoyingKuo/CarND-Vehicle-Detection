@@ -37,7 +37,7 @@
     <th>
       <p align="center">
         <img src="./features_image/notcar.png" alt="original" height=128>
-        <br>Car image for test
+        <br>Not-Car image for test
       </p>
     </th>
     <th>
