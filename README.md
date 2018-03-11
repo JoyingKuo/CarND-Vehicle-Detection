@@ -10,6 +10,12 @@
   <table style="width:100%">
     <th>
       <p align="center">
+        <img src="./features_image/image0000.png" alt="original" height=128>
+        <br>Car image for test
+      </p>
+    </th>
+    <th>
+      <p align="center">
         <img src="./features_image/color_hist.png" alt="color_hist_img" height=128>
         <br>Color Histogram feature image
       </p>
@@ -126,19 +132,20 @@
     <th>
       <p align="center">
         <img src="./windows_image/heatmap.jpg" alt="heatmap_img" height=256>
-        <br>Heatmap image
+        <br>Heatmap
       </p>
      </th>
      <th>
       <p align="center">
         <img src="./windows_image/final_detect.jpg" alt="Final_img" height=256>
-        <br>Heatmap image
-      </p>
+        <br>Result image with thresholded heatmap
+      </p>
      </th>
   </table>
+  
 ### Video Implementation
 #### 1.Provide a link to your final video output. 
-  Here's a [link for my final video ouput](https://youtu.be/6B31eLtrz1U)
+  Here's a [link for my final video ouput] (https://youtu.be/6B31eLtrz1U)
 
 #### 2.Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
   I use the heatmap  to get detection result from the test image, and threslod the heatmap to reduce most of the false positive.
