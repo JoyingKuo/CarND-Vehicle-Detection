@@ -7,10 +7,10 @@
   
   To make sure that all the fuction for feature extraction work properly, I first use two random-selected pictures in training dataset
   to extract the features for *car* and *not-car*.Here are the image for the test result:
-  <table style="width:100%">
+<table style="width:100%">
     <th>
       <p align="center">
-        <img src="./features_image/image0000.png" alt="original" height=128>
+        <img src="./features_image/car.png" alt="original" height=128>
         <br>Car image for test
       </p>
     </th>
@@ -29,6 +29,32 @@
     <th>
       <p align="center">
         <img src="./features_image/hog_image.png" alt="hog_image" height=128>
+        <br>HOG feature image
+      </p>
+     </th>
+  </table>
+<table style="width:100%">
+    <th>
+      <p align="center">
+        <img src="./features_image/notcar.png" alt="original" height=128>
+        <br>Car image for test
+      </p>
+    </th>
+    <th>
+      <p align="center">
+        <img src="./features_image/notcar_color_hist.png" alt="color_hist_img" height=128>
+        <br>Color Histogram feature image
+      </p>
+    </th>
+    <th>
+      <p align="center">
+        <img src="./features_image/notcar_spatial_plot.png" alt="spatial_img" height=128>
+        <br>Spatial feature image
+      </p>
+    </th>
+    <th>
+      <p align="center">
+        <img src="./features_image/notcar_hog_image.png" alt="hog_image" height=128>
         <br>HOG feature image
       </p>
      </th>
