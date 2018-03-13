@@ -182,9 +182,20 @@
   Evaluate the image without caching my heatmap,causing the unstability of my video processing.Hence, I use the following two method:
  	
 ##### 1.collections.deque
-  Ues the ```collections.deque``` to caching the previous frame, and increase the threshold to a reliable number.The result video seems 
-	stabler than before, but still have some false positive.
+  Ues the ```collections.deque``` to caching the previous frame, and increase the threshold to a reliable number.The result video seems
+  stabler than before, but still have some false positive.
+  ```
+  def cache_heat_deque(heatmap, box_deque):
 	
+	for bbox_list in box_deque:
+		for box in bbox_list:
+		# Add += 1 for all pixels inside each bbox
+		# Assuming each "box" takes the form ((x1, y1), (x2, y2))
+			heatmap[box[0][1]:box[1][1], box[0][0]:box[1][0]] += 1
+		
+	# Return updated heatmap
+	return heatmap
+  ```
 	 
   It is implemented in [`search_classify.py`](search_classify.py)
  
@@ -192,11 +203,6 @@
  I collected the window image which is predicted to be positive, then pick the fasle detection window adding to the non-vehicle
 	training data and balance the sample size. The Training accuracy is also 0.99. This process really reduce the false positive of
 	my detection.
-  ```
-  if prediction == 1:
-            test_img_dir='./hard_negative/'+id_generator()+'.png'
-            plt.imsave(test_img_dir,test_img)
-  ```
  
 ### Disscussion
 #### Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
